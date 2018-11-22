@@ -2,8 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1>Oy Northwind Ab</h1>
-    <h2>Tietojärjestelmä</h2>
+    <h1>Oy Northwind Ab Tietojärjestelmä</h1>
+    <h2>Tuotteiden vapaa/puutelista</h2>
 <p>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" Height="245px" Width="436px">
         <Columns>

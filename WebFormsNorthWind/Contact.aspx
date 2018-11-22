@@ -1,17 +1,20 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebFormsNorthWind.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
-
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+    <h2>Tavarantoimittajat</h2>
+    <p>&nbsp;</p>
+    <p>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="SupplierID" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="SupplierID" HeaderText="SupplierID" InsertVisible="False" ReadOnly="True" SortExpression="SupplierID" />
+                <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
+                <asp:BoundField DataField="ContactName" HeaderText="ContactName" SortExpression="ContactName" />
+                <asp:BoundField DataField="ContactTitle" HeaderText="ContactTitle" SortExpression="ContactTitle" />
+                <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
+                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:northwindConnectionString %>" SelectCommand="SELECT [SupplierID], [CompanyName], [ContactName], [ContactTitle], [City], [Country], [Phone] FROM [Suppliers]"></asp:SqlDataSource>
+    </p>
 </asp:Content>
