@@ -1,6 +1,8 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebFormsNorthWind.Contact" %>
+﻿<%@ Page Title="Tavarantoimittajat" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebFormsNorthWind.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+    <h3>Oy Northwind Ab tietojärjestelmä</h3>
     <h2>Tavarantoimittajat</h2>
     <p>&nbsp;</p>
     <p>
